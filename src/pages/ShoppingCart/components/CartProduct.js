@@ -87,7 +87,7 @@ const content = (cartList, navigate, dispatch, lengthShoppingCart) => {
 
 	return (
 		<>
-			{lengthShoppingCart.length > 0 && (
+			{cartList.length > 0 && (
 				<>
 					{fiveAddNewProduct.map((e) => {
 						return (
