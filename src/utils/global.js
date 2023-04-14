@@ -52,8 +52,11 @@ export const customArray = (length) => {
 	return new Array(length).fill(0);
 };
 
-export const urlApi = "https://api-ecommerce-v8z5.onrender.com/api";
-export const portAuth = "https://api-auth-ecommerce.onrender.com";
+// export const urlApi = "https://api-ecommerce-v8z5.onrender.com/api";
+// export const portAuth = "https://api-auth-ecommerce.onrender.com";
+// export const urlPayment = "https://api-payment-621f.onrender.com";
+export const urlApi = "http://localhost:3000/api";
+export const portAuth = "http://localhost:5000";
 export const urlPayment = "https://api-payment-621f.onrender.com";
 export const urlApiShoppingCart = `${urlApi}/shoppingCart/`;
 export const cookie_domain = window.location.hostname;

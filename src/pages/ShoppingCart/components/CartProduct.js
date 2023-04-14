@@ -87,9 +87,9 @@ const content = (cartList, navigate, dispatch, lengthShoppingCart) => {
 
 	return (
 		<>
-			<>
-				{lengthShoppingCart &&
-					fiveAddNewProduct.map((e) => {
+			{lengthShoppingCart.length > 0 && (
+				<>
+					{fiveAddNewProduct.map((e) => {
 						return (
 							<div
 								key={e.id}
@@ -118,19 +118,20 @@ const content = (cartList, navigate, dispatch, lengthShoppingCart) => {
 							</div>
 						);
 					})}
-				<div className="flex items-center justify-between gap-x-10">
-					<span>
-						{fiveAddNewProduct.length} sản phẩm được thêm vào gần
-						đây nhất
-					</span>
-					<button
-						onClick={() => navigate("/shopping-cart")}
-						className="px-4 py-2 text-lg font-medium text-white bg-orange-500 rounded-sm"
-					>
-						Xem giỏ hàng
-					</button>
-				</div>
-			</>
+					<div className="flex items-center justify-between gap-x-10">
+						<span>
+							{fiveAddNewProduct.length} sản phẩm được thêm vào
+							gần đây nhất
+						</span>
+						<button
+							onClick={() => navigate("/shopping-cart")}
+							className="px-4 py-2 text-lg font-medium text-white bg-orange-500 rounded-sm"
+						>
+							Xem giỏ hàng
+						</button>
+					</div>
+				</>
+			)}
 			{cartList.length === 0 && (
 				<img
 					src="https://th.bing.com/th/id/R.a562335b70240afef037b16236f0ee83?rik=FlaHQkFZorFb1w&pid=ImgRaw&r=0"
